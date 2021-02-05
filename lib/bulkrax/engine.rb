@@ -13,11 +13,6 @@ module Bulkrax
       end
     end
 
-    config.generators do |g|
-      g.test_framework :rspec
-      g.fixture_replacement :factory_bot, dir: 'spec/factories'
-    end
-
     config.after_initialize do
       my_engine_root = Bulkrax::Engine.root.to_s
       paths = ActionController::Base.view_paths.collect(&:to_s)
